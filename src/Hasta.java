@@ -1,6 +1,6 @@
 public class Hasta implements Comparable<Hasta> {
     private String isim;
-    private String sikayet;
+    private IllnessCompliance sikayet;
     private int oncelik;
 
     @Override
@@ -21,15 +21,15 @@ public class Hasta implements Comparable<Hasta> {
         return 0;
     }
 
-    public Hasta(String isim, String sikayet) {
+    public Hasta(String isim, IllnessCompliance sikayet) {
         this.isim = isim;
         this.sikayet = sikayet;
 
-        if (sikayet == "Apandist") {
+        if (sikayet == IllnessCompliance.APANDIST) {
             this.oncelik = 1;
-        } else if (sikayet == "Yanik") {
+        } else if (sikayet == IllnessCompliance.YANIK) {
             this.oncelik = 2;
-        } else if (sikayet == "Bas agrisi") {
+        } else if (sikayet == IllnessCompliance.BAS_AGRISI) {
             this.oncelik = 3;
         }
 
